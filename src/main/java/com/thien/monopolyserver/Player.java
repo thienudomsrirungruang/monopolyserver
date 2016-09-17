@@ -179,14 +179,14 @@ public class Player {
     }
     public void addMoney(int money, boolean checkBankrupt) throws InterruptedException {
         setMoney(this.money + money);
-        if(money >= 0){
+        if(money > 0){
             clientInfo.sendCommandToClient("Print~" + money + " has been added to " + name + "'s account.\r\n", 2);
-        }else{
+        }else if(money < 0){
             clientInfo.sendCommandToClient("Print~" + (-1 * money) + " has been taken from " + name + "'s account.\r\n", 2);
         }
         if(checkBankrupt){
             if(this.money < 0){
-                clientInfo.sendCommandToClient("Print~You have gone bankrupt!", 1);
+                clientInfo.sendCommandToClient("Print~You have gone bankrupt!\r\n", 2);
                 board.getPlayers().remove(this);
             }
         }
