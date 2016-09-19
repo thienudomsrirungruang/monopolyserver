@@ -137,7 +137,7 @@ public class Player {
         int[] diceRolls = new int[2];
         diceRolls[0] = random.nextInt(6) + 1;
         diceRolls[1] = random.nextInt(6) + 1;
-        clientInfo.sendCommandToClient("Print~You roll " + diceRolls[0] + " and " + diceRolls[1] + ", with a total of " + (diceRolls[0] + diceRolls[1]), 2);
+        clientInfo.sendCommandToClient("Print~You roll " + diceRolls[0] + " and " + diceRolls[1] + ", with a total of " + (diceRolls[0] + diceRolls[1]) + "\r\n", 2);
         if(move){
             move(diceRolls[0] + diceRolls[1]);
         }
