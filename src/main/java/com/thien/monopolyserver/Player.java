@@ -63,7 +63,7 @@ public class Player {
         while(!answer.equalsIgnoreCase("no")){
             answer = clientInfo.sendRequestToClient("MakeChoice~true~Do you want to do anything different? (yes/no)~yes~no", 1);
             if(answer.equalsIgnoreCase("yes")){
-                String choice = getClientInfo().sendRequestToClient("MakeChoice~true~What do you want to do?\r\n\"House\"\tto buy a house\r\n\"Board\"\tto view the board\r\n\"Info\"\tto view detailed information for a square\r\n\"Cancel\"\tto cancel", 5);
+                String choice = getClientInfo().sendRequestToClient("MakeChoice~true~What do you want to do?\r\n\"House\"\tto buy a house\r\n\"Board\"\tto view the board\r\n\"Info\"\tto view detailed information for a square\r\n\"Cancel\"\tto cancel\r\n~House~Board~Info~Cancel", 6);
                 if(choice.equalsIgnoreCase("house")){
                     clientInfo.sendCommandToClient("Print~Which property do you want to build on?\r\n", 2);
                     int i = 0;
