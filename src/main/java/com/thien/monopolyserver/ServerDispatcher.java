@@ -3,6 +3,7 @@ package com.thien.monopolyserver;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ServerDispatcher extends Thread{
     private ArrayList<ClientInfo> playerList = new ArrayList<ClientInfo>();
@@ -16,10 +17,13 @@ public class ServerDispatcher extends Thread{
     }
 
     public void run(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("How many players? ");
+        int gameSize = input.nextInt();
         System.out.println("Dispatcher started");
         pf = new PlayerFinder(this, port);
         pf.start();
-        while(playerList.size() < 2) {
+        while(playerList.size() < gameSize) {
             try{
                 Thread.sleep(10);
             }catch (InterruptedException e){
