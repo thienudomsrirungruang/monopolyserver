@@ -22,7 +22,6 @@ public class ClientListener extends Thread{
         try{
             while(!isInterrupted()){
                 String message = br.readLine();
-                System.out.println("Message received: " + message);
                 if(message != null){
                     messages.add(message);
                 }

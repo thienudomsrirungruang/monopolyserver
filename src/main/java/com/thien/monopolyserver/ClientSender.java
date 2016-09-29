@@ -36,7 +36,6 @@ public class ClientSender extends Thread{
     }
     public synchronized void sendMessage(String message){
         messages.add(message);
-        System.out.println("Message sent: " + message);
         notify();
     }
     private synchronized void sendMessageToClient(String message){
