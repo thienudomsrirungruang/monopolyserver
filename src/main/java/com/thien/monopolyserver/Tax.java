@@ -10,6 +10,6 @@ public class Tax extends Square{
     }
 
     public void printCard(Player player) throws InterruptedException {
-        player.getClientInfo().sendCommandToClient(getPosition() + "\t " + getName() + "\t Tax\t Pay " + taxAmount + " if you land here!\t On this square: " + getEveryoneOnSquare() + "\r\n", 2);
+        player.getClientInfo().sendCommandToClient("Print~" + getPosition() + "\t " + getName() + "\t Tax\t Pay " + taxAmount + " if you land here!\t On this square: " + getEveryoneOnSquare() + "\r\n", 2);
     }
 }
