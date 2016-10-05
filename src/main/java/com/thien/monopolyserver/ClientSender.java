@@ -31,7 +31,7 @@ public class ClientSender extends Thread{
         while(messages.size() == 0){
             wait();
         }
-        String message = (String) messages.removeLast();
+        String message = (String) messages.remove(0);
         return message;
     }
     public synchronized void sendMessage(String message){
