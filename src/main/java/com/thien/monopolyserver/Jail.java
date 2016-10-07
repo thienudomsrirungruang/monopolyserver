@@ -7,7 +7,7 @@ public class Jail extends Square{
         if(player.getJailed()){
             player.getClientInfo().sendCommandToClient("Print~You are in jail.\r\n", 2);
         }else{
-            player.getClientInfo().sendCommandToClient("You are just visiting jail.", 2);
+            player.getClientInfo().sendCommandToClient("Print~You are just visiting jail.\r\n", 2);
         }
     }
 
