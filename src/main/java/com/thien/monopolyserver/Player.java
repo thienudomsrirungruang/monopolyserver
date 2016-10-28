@@ -104,7 +104,7 @@ public class Player {
 
     public boolean tryBreakingOutOfJail(Random random) throws InterruptedException {
         clientInfo.sendCommandToClient("Print~You try to roll a double to get out of jail.\r\n", 2);
-        if(diceRoll(random, true)){
+        if(diceRoll(random, false)){
             clientInfo.sendCommandToClient("Print~You break out of jail.\r\n", 2);
             return true;
         }else{
