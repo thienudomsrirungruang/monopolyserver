@@ -86,7 +86,7 @@ public class Property extends BuyableSquare{
     }
 
     public void printRentDetails(Player player) throws InterruptedException {
-        player.getClientInfo().sendCommandToClient("Print~Name: " + getName() + "\r\nPosition: " + getPosition() + "\r\n\"----------RENT----------\"" + "\r\nNo houses:\t" + rent[0] + "\r\n1 house:\t" + rent[1] + "\r\n2 houses:\t" + rent[2] + "\r\n3 houses:\t" + rent[3] + "\r\n4 houses:\t" + rent[4] + "\r\nHotel:   \t" + rent[5] + "\r\n", 10);
+        player.getClientInfo().sendCommandToClient("Print~Name: " + getName() + "\r\nPosition: " + getPosition() + "\r\n----------RENT----------" + "\r\nNo houses:\t" + rent[0] + "\r\n1 house:\t" + rent[1] + "\r\n2 houses:\t" + rent[2] + "\r\n3 houses:\t" + rent[3] + "\r\n4 houses:\t" + rent[4] + "\r\nHotel:   \t" + rent[5] + "\r\n", 10);
     }
     public int getHouses(){
         return houses;
